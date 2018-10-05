@@ -14,6 +14,8 @@
 		D1ABA0F1216795E000DD5DF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1ABA0EF216795E000DD5DF4 /* LaunchScreen.storyboard */; };
 		D1ABA0FC216795E000DD5DF4 /* DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1ABA0FB216795E000DD5DF4 /* DemoTests.swift */; };
 		D1ABA107216795E000DD5DF4 /* DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1ABA106216795E000DD5DF4 /* DemoUITests.swift */; };
+		D1ABA1392167A49B00DD5DF4 /* BlurKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1ABA1382167A46400DD5DF4 /* BlurKit.framework */; };
+		D1ABA13A2167A49B00DD5DF4 /* BlurKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D1ABA1382167A46400DD5DF4 /* BlurKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +33,35 @@
 			remoteGlobalIDString = D1ABA0E2216795DF00DD5DF4;
 			remoteInfo = Demo;
 		};
+		D1ABA1372167A46400DD5DF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1ABA1332167A46400DD5DF4 /* BlurKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D1ABA0CF2167955E00DD5DF4;
+			remoteInfo = BlurKit;
+		};
+		D1ABA13B2167A49B00DD5DF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1ABA1332167A46400DD5DF4 /* BlurKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D1ABA0CE2167955E00DD5DF4;
+			remoteInfo = BlurKit;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D1ABA13D2167A49B00DD5DF4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D1ABA13A2167A49B00DD5DF4 /* BlurKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D1ABA0E3216795DF00DD5DF4 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +77,7 @@
 		D1ABA102216795E000DD5DF4 /* DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1ABA106216795E000DD5DF4 /* DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUITests.swift; sourceTree = "<group>"; };
 		D1ABA108216795E000DD5DF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1ABA1332167A46400DD5DF4 /* BlurKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BlurKit.xcodeproj; path = ../BlurKit.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1ABA1392167A49B00DD5DF4 /* BlurKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +109,7 @@
 		D1ABA0DA216795DF00DD5DF4 = {
 			isa = PBXGroup;
 			children = (
+				D1ABA1332167A46400DD5DF4 /* BlurKit.xcodeproj */,
 				D1ABA0E5216795DF00DD5DF4 /* Demo */,
 				D1ABA0FA216795E000DD5DF4 /* DemoTests */,
 				D1ABA105216795E000DD5DF4 /* DemoUITests */,
@@ -125,6 +158,14 @@
 			path = DemoUITests;
 			sourceTree = "<group>";
 		};
+		D1ABA1342167A46400DD5DF4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D1ABA1382167A46400DD5DF4 /* BlurKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,10 +176,12 @@
 				D1ABA0DF216795DF00DD5DF4 /* Sources */,
 				D1ABA0E0216795DF00DD5DF4 /* Frameworks */,
 				D1ABA0E1216795DF00DD5DF4 /* Resources */,
+				D1ABA13D2167A49B00DD5DF4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D1ABA13C2167A49B00DD5DF4 /* PBXTargetDependency */,
 			);
 			name = Demo;
 			productName = Demo;
@@ -215,6 +258,12 @@
 			mainGroup = D1ABA0DA216795DF00DD5DF4;
 			productRefGroup = D1ABA0E4216795DF00DD5DF4 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D1ABA1342167A46400DD5DF4 /* Products */;
+					ProjectRef = D1ABA1332167A46400DD5DF4 /* BlurKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D1ABA0E2216795DF00DD5DF4 /* Demo */,
@@ -223,6 +272,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D1ABA1382167A46400DD5DF4 /* BlurKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = BlurKit.framework;
+			remoteRef = D1ABA1372167A46400DD5DF4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D1ABA0E1216795DF00DD5DF4 /* Resources */ = {
@@ -289,6 +348,11 @@
 			isa = PBXTargetDependency;
 			target = D1ABA0E2216795DF00DD5DF4 /* Demo */;
 			targetProxy = D1ABA103216795E000DD5DF4 /* PBXContainerItemProxy */;
+		};
+		D1ABA13C2167A49B00DD5DF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BlurKit;
+			targetProxy = D1ABA13B2167A49B00DD5DF4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -431,6 +495,7 @@
 		D1ABA10C216795E000DD5DF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V8AZ23YEL4;
@@ -449,6 +514,7 @@
 		D1ABA10D216795E000DD5DF4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V8AZ23YEL4;
