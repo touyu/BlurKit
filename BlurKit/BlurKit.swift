@@ -15,7 +15,7 @@ public protocol BlurKitCompatible {
 }
 
 public final class BlurKit<Base> {
-    public let base: Base
+    let base: Base
     public init(_ base: Base) {
         self.base = base
     }
@@ -54,7 +54,7 @@ extension BlurKit where Base: UIView {
         blurView.blurRadius = blurRadius
         blurView.colorTint = colorTint
         blurView.colorTintAlpha = colorTintAlpha
-        superview.addSubview(blurView)
+        base.addSubview(blurView)
         addConstrains(view: blurView)
     }
 
@@ -62,12 +62,8 @@ extension BlurKit where Base: UIView {
         blurView?.removeFromSuperview()
     }
 
-    private var superview: UIView {
-        return base.superview ?? base
-    }
-
     private var blurView: BlurView? {
-        return superview.subviews.first(where: { $0.restorationIdentifier == blurViewID }) as? BlurView
+        return base.subviews.first(where: { $0.restorationIdentifier == blurViewID }) as? BlurView
     }
 
     private var canAddBlur: Bool {
@@ -75,7 +71,7 @@ extension BlurKit where Base: UIView {
     }
 
     private var blurViewID: String {
-        return "_blur_view"
+        return "_blur_view" + ObjectIdentifier(base).debugDescription
     }
 
     private func addConstrains(view: UIView) {

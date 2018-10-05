@@ -11,13 +11,14 @@ import BlurKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
 
-        
+        label.bk.addBlur(blurRadius: 3, colorTint: .white, colorTintAlpha: 0.4)
+        imageView.bk.addBlur(blurRadius: 4, colorTint: .white, colorTintAlpha: 0.2)
     }
-
-
 }
 
