@@ -44,6 +44,11 @@ extension BlurKit where Base: UIView {
         get { return blurView?.colorTintAlpha ?? 0 }
         set { blurView?.colorTintAlpha = newValue }
     }
+    
+    public var isBlurHidden: Bool {
+        get { return blurView?.isHidden ?? false }
+        set { blurView?.isHidden = newValue }
+    }
 
     public func addBlur(blurRadius: CGFloat = 10, colorTint: UIColor? = nil, colorTintAlpha: CGFloat = 0.0) {
         if !canAddBlur { return }

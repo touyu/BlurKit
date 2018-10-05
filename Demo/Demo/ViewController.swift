@@ -16,9 +16,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        label.bk.addBlur(blurRadius: 3, colorTint: .white, colorTintAlpha: 0.4)
-        imageView.bk.addBlur(blurRadius: 4, colorTint: .white, colorTintAlpha: 0.2)
+        
+        view.bk.addBlur(blurRadius: 5)
+        
+        //  or
+        //  label.bk.addBlur(blurRadius: 3, colorTint: .white, colorTintAlpha: 0.4)
+        //  imageView.bk.addBlur(blurRadius: 4, colorTint: .white, colorTintAlpha: 0.2)
     }
 }
 
