@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		D1ABA0D42167955E00DD5DF4 /* BlurKit.h in Headers */ = {isa = PBXBuildFile; fileRef = D1ABA0D22167955E00DD5DF4 /* BlurKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D1ABA115216797BF00DD5DF4 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1ABA114216797BF00DD5DF4 /* BlurView.swift */; };
+		D1ABA117216798BE00DD5DF4 /* BlurKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1ABA116216798BE00DD5DF4 /* BlurKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D1ABA0CF2167955E00DD5DF4 /* BlurKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BlurKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1ABA0D22167955E00DD5DF4 /* BlurKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlurKit.h; sourceTree = "<group>"; };
 		D1ABA0D32167955E00DD5DF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1ABA114216797BF00DD5DF4 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		D1ABA116216798BE00DD5DF4 /* BlurKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +52,8 @@
 			children = (
 				D1ABA0D22167955E00DD5DF4 /* BlurKit.h */,
 				D1ABA0D32167955E00DD5DF4 /* Info.plist */,
+				D1ABA114216797BF00DD5DF4 /* BlurView.swift */,
+				D1ABA116216798BE00DD5DF4 /* BlurKit.swift */,
 			);
 			path = BlurKit;
 			sourceTree = "<group>";
@@ -95,6 +101,7 @@
 				TargetAttributes = {
 					D1ABA0CE2167955E00DD5DF4 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -130,6 +137,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1ABA115216797BF00DD5DF4 /* BlurView.swift in Sources */,
+				D1ABA117216798BE00DD5DF4 /* BlurKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +270,7 @@
 		D1ABA0D82167955E00DD5DF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -278,6 +288,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.YutoAkiba.BlurKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -286,6 +297,7 @@
 		D1ABA0D92167955E00DD5DF4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
