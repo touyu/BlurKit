@@ -4,6 +4,8 @@
 <img src="https://img.shields.io/badge/language-Swift%204.2-orange.svg">
 <img src="https://img.shields.io/badge/license-MIT-blue.svg">
 
+<img src="https://github.com/touyu/BlurKit/blob/docs/docs/blur.gif" width=240>
+
 # Usage
 ```swift
 class ViewController: UIViewController {
