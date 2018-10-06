@@ -7,9 +7,18 @@
 <img src="https://img.shields.io/badge/language-Swift%204.2-orange.svg">
 <img src="https://img.shields.io/badge/license-MIT-blue.svg">
 
-<img src="https://github.com/touyu/BlurKit/blob/docs/docs/blur.gif" width=240>
+A lightweight library that can easily blur the view.
+
+## Features
+- [x] Comfortable NSAttributedString
+- [x] Better autocompletion
+- [x] Easy range specification
+- [x] Chainable methods
 
 ## Usage
+
+<img src="https://github.com/touyu/BlurKit/blob/docs/docs/blur.gif" width=240>
+
 ```swift
 class ViewController: UIViewController {
 
