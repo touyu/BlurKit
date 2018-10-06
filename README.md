@@ -12,6 +12,7 @@ A lightweight library that can easily blur the view.
 ## Features
 - [x] Without inheritance
 - [x] Corresponds to UIView, UIImageView, UILabel etc...
+- [x] Adjustable blur condition
 - [x] Lightweight
 
 ## Usage
