@@ -1,0 +1,11 @@
+framework module BlurKit {
+  umbrella header "BlurKit.h"
+
+  export *
+  module * { export * }
+}
+
+module BlurKit.Swift {
+    header "BlurKit-Swift.h"
+    requires objc
+}
