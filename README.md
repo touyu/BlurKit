@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/touyu/BlurKit/docs/docs/BlurKit-Logo.png" width=300>
+  <img src="https://raw.githubusercontent.com/touyu/BlurKit/docs/docs/BlurKit-Logo.png" width=400>
 </p>
 
 <a href="https://github.com/Carthage/Carthage/"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"></a>
