@@ -8,6 +8,20 @@
 
 import UIKit
 
+class dummyObj {
+    init() {
+        swizzMothod()
+    }
+    
+    private func swizzMothod() {
+        let m1 = class_getInstanceMethod(UIView.self, #selector(UIView().addSubview(_:)))!
+        let m2 = class_getInstanceMethod(UIView.self, #selector(UIView()._addSubview(_:)))!
+        method_exchangeImplementations(m1, m2)
+    }
+}
+
+private var isShouldSwizzMethodKey: UInt8 = 0
+
 public protocol BlurKitCompatible {
     associatedtype Compatible
 
@@ -27,7 +41,14 @@ public extension BlurKitCompatible {
     }
 }
 
-extension UIView: BlurKitCompatible {}
+extension UIView: BlurKitCompatible {
+    @objc fileprivate func _addSubview(_ view: UIView) {
+        _addSubview(view)
+        if let blurView = bk.blurView {
+            bk.base.bringSubviewToFront(blurView)
+        }
+    }
+}
 
 extension BlurKit where Base: UIView {
     public var blurRadius: CGFloat {
@@ -51,6 +72,12 @@ extension BlurKit where Base: UIView {
     }
 
     public func addBlur(blurRadius: CGFloat = 10, colorTint: UIColor? = nil, colorTintAlpha: CGFloat = 0.0) {
+        print(isShouldSwizzMethod)
+        if isShouldSwizzMethod {
+            swizzMothod()
+            isShouldSwizzMethod = false
+        }
+        print(isShouldSwizzMethod)
         if !canAddBlur { return }
 
         let blurView = BlurView(frame: base.frame)
@@ -67,7 +94,7 @@ extension BlurKit where Base: UIView {
         blurView?.removeFromSuperview()
     }
 
-    private var blurView: BlurView? {
+    fileprivate var blurView: BlurView? {
         return base.subviews.first(where: { $0.restorationIdentifier == blurViewID }) as? BlurView
     }
 
@@ -86,5 +113,18 @@ extension BlurKit where Base: UIView {
             view.topAnchor.constraint(equalTo: base.topAnchor),
             view.bottomAnchor.constraint(equalTo: base.bottomAnchor),
         ])
+    }
+    
+    private func swizzMothod() {
+        let m1 = class_getInstanceMethod(Base.self, #selector(base.addSubview(_:)))!
+        let m2 = class_getInstanceMethod(Base.self, #selector(base._addSubview(_:)))!
+        print(method_getImplementation(m1))
+        print(method_getImplementation(m2))
+        method_exchangeImplementations(m1, m2)
+    }
+    
+    var isShouldSwizzMethod: Bool {
+        get { return objc_getAssociatedObject(self, &isShouldSwizzMethodKey) as? Bool ?? true }
+        set { objc_setAssociatedObject(self, &isShouldSwizzMethodKey, newValue, .OBJC_ASSOCIATION_RETAIN) }
     }
 }

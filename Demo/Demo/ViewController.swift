@@ -19,6 +19,14 @@ class ViewController: UIViewController {
         
         view.bk.addBlur(blurRadius: 5)
         
+        view.bk.addBlur()
+        
+        view.bk.addBlur()
+        
+        let blueView = UIView(frame: CGRect(x: 30, y: 30, width: 100, height: 100))
+        blueView.backgroundColor = .blue
+        view.addSubview(blueView)
+
         //  or
         //  label.bk.addBlur(blurRadius: 3, colorTint: .white, colorTintAlpha: 0.4)
         //  imageView.bk.addBlur(blurRadius: 4, colorTint: .white, colorTintAlpha: 0.2)
