@@ -1,4 +1,7 @@
-# BlurKit
+<p align="center">
+  <img src="https://github.com/touyu/BlurKit/blob/docs/docs/BlurKit-Logo.png" width=300>
+</p>
+
 <a href="https://github.com/Carthage/Carthage/"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"></a>
 <img src="https://img.shields.io/badge/platforms-iOS-lightgrey.svg">
 <img src="https://img.shields.io/badge/language-Swift%204.2-orange.svg">
