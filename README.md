@@ -10,5 +10,5 @@ Add this to `Cartfile`
 github "touyu/BlurKit" ~> 0.1
 ```
 ```
-carthage update --platform iOS
+$ carthage update --platform iOS
 ```
