@@ -10,10 +10,9 @@
 A lightweight library that can easily blur the view.
 
 ## Features
-- [x] Comfortable NSAttributedString
-- [x] Better autocompletion
-- [x] Easy range specification
-- [x] Chainable methods
+- [x] Without inheritance
+- [x] Corresponds to UIView, UIImageView, UILabel etc...
+- [x] Lightweight
 
 ## Usage
 
