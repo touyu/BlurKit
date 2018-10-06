@@ -17,7 +17,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.bk.addBlur(blurRadius: 5)
+        view.bk.addBlur(blurRadius: 0)
+
+        UIView.animate(withDuration: 3) {
+            self.view.bk.blurRadius = 5
+
+        }
         
         //  or
         //  label.bk.addBlur(blurRadius: 3, colorTint: .white, colorTintAlpha: 0.4)
