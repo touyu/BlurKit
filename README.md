@@ -45,3 +45,6 @@ github "touyu/BlurKit" ~> 0.1
 ```
 $ carthage update --platform iOS
 ```
+
+## ⚠️ Using Private API
+Because `BlurKit` uses the Private API, please use it carefully.
