@@ -6,7 +6,7 @@
 
 <img src="https://github.com/touyu/BlurKit/blob/docs/docs/blur.gif" width=240>
 
-# Usage
+## Usage
 ```swift
 class ViewController: UIViewController {
 
@@ -26,7 +26,7 @@ class ViewController: UIViewController {
 }
 ```
 
-# Installation
+## Installation
 Add this to `Cartfile`
 ```
 github "touyu/BlurKit" ~> 0.1
