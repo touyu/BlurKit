@@ -30,12 +30,14 @@ class ViewController: UIViewController {
         UIView.animate(withDuration: 5) {
             self.view.bk.blurRadius = 5
         }
-        
-        //  or
-        //  label.bk.addBlur(blurRadius: 3, colorTint: .white, colorTintAlpha: 0.4)
-        //  imageView.bk.addBlur(blurRadius: 4, colorTint: .white, colorTintAlpha: 0.2)
     }
 }
+``` 
+```swift
+label.bk.addBlur(blurRadius: 3, colorTint: .white, colorTintAlpha: 0.4)
+imageView.bk.addBlur(blurRadius: 4, colorTint: .white, colorTintAlpha: 0.2)
+view.bk.removeBlur()
+view.bk.isBlurHidden = true // or false
 ```
 
 ## Installation
