@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
   s.name         = "BlurKit"
-  s.version      = "0.1"
+  s.version      = "0.1.1"
   s.summary      = "A lightweight library that can easily blur the view."
-  s.homepage     = "https://github.com/adventam10/AMColorPicker"
+  s.homepage     = "https://github.com/touyu/BlurKit"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = { "touyu" => "dev.akkey0222@gmail.com" }
   s.source       = { :git => "https://github.com/touyu/BlurKit.git", :tag => "#{s.version}" }
