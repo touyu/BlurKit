@@ -41,12 +41,25 @@ view.bk.isBlurHidden = true // or false
 ```
 
 ## Installation
+### Carthage
 Add this to `Cartfile`
 ```
 github "touyu/BlurKit" ~> 0.1
 ```
 ```
 $ carthage update --platform iOS
+```
+### CocoaPods
+```ruby
+# Podfile
+use_frameworks!
+
+target 'YOUR_TARGET_NAME' do
+    pod 'BlurKit',    '~> 0.1'
+end
+```
+```
+$ pod install
 ```
 
 ## ⚠️ Caution
