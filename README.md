@@ -55,7 +55,7 @@ $ carthage update --platform iOS
 use_frameworks!
 
 target 'YOUR_TARGET_NAME' do
-    pod 'BlurKit',    '~> 0.1'
+    pod 'BlurKit', '~> 0.1'
 end
 ```
 ```
