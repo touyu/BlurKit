@@ -8,6 +8,8 @@
 <img src="https://img.shields.io/badge/language-Swift%204.2-orange.svg">
 <img src="https://img.shields.io/badge/license-MIT-blue.svg">
 
+⚠️ **Be careful. Currently it does not work on iOS 12.**
+
 A lightweight library that can easily blur the view.
 
 ## Features
